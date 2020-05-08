@@ -1,0 +1,15 @@
+<div [formGroup]="form">
+<!--    <p>{{filter}}</p>-->
+<!--    <input formControlName="{{filter}}" type="checkbox">-->
+    <ion-item>
+        <ion-label>{{filter}}</ion-label>
+        <ion-checkbox color="dark" [value]="filter" formControlName="{{filter}}"></ion-checkbox>
+    </ion-item>
+
+
+<!--    <ion-item>-->
+<!--        <ion-label>{{filter}}</ion-label>-->
+<!--        <ion-radio slot="start" [value]="filter"></ion-radio>-->
+<!--    </ion-item>-->
+</div>
+

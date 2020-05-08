@@ -1,14 +1,20 @@
 import { NgModule } from '@angular/core';
 import { PreloadAllModules, RouterModule, Routes } from '@angular/router';
+import {FiltersComponent} from './filters/filters.component';
+import {DrinksPage} from './drinks/drinks-page.component';
 
 const routes: Routes = [
   {
-    path: 'home',
-    loadChildren: () => import('./home/home.module').then( m => m.HomePageModule)
+    path: 'drinks',
+    component: DrinksPage
+  },
+  {
+    path: 'filters',
+    component: FiltersComponent,
   },
   {
     path: '',
-    redirectTo: 'home',
+    redirectTo: 'drinks',
     pathMatch: 'full'
   },
 ];

@@ -1,0 +1,41 @@
+#container {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100%;
+  width: 100%;
+  max-width: 320px;
+  margin: auto;
+}
+
+#container p {
+  font-size: 16px;
+  line-height: 19px;
+  color: #8c8c8c;
+  margin-left: 20px;
+}
+
+.list_header {
+  display: flex;
+  justify-content: space-between;
+  max-width: 800px;
+  margin: auto;
+
+  ion-icon {
+    cursor: pointer;
+  }
+}
+
+.cocktail-info {
+  width: 100%;
+  max-width: 800px;
+  display: flex;
+  align-items: center;
+  padding-left: 20px;
+  margin-bottom: 40px;
+}
+
+.img {
+  width: 100px;
+  height: 100px;
+}

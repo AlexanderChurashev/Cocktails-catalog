@@ -1,0 +1,22 @@
+<ion-header [translucent]="true">
+    <ion-toolbar>
+        <ion-title>
+            <div class="list_header">
+                <div>Drinks</div>
+                <ion-icon name="funnel-sharp" (click)="goFilters()"></ion-icon>
+            </div>
+        </ion-title>
+    </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+    <div id="container">
+        <div *ngFor="let cocktail of cocktails$ | async">
+            <p>{{cocktail.title}}</p>
+            <div class="cocktail-info" *ngFor="let drink of cocktail.items">
+                <img class="img" [src]="drink.strDrinkThumb" alt="">
+                <p>{{drink.strDrink}}</p>
+            </div>
+        </div>
+    </div>
+</ion-content>

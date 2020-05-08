@@ -1,0 +1,18 @@
+.item.sc-ion-label-md-h, .item .sc-ion-label-md-h {
+  --color: #8c8c8c;
+  font-size: 16px;
+  line-height: 19px;
+}
+
+ion-checkbox {
+  --background-checked: white;
+  --checkmark-color: black;
+  --border-color-checked: white;
+  --border-color: white;
+}
+
+ion-item {
+  width: 100%;
+  --border-style: none;
+}
+

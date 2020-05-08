@@ -1,0 +1,22 @@
+<ion-header [translucent]="true">
+    <ion-toolbar>
+        <ion-title>
+            <div class="home_header" (click)="goDrinks()">
+                <ion-icon name="arrow-back-sharp"></ion-icon>
+                <div class="title">Filters</div>
+            </div>
+        </ion-title>
+    </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+    <div id="container">
+        <div class="content-box" *ngFor="let filter of filters$ | async">
+            <app-filter-item
+                    [form]="form"
+                    [filter]="filter"
+            ></app-filter-item>
+        </div>
+        <ion-button class="btn" color="medium" (click)="getFiltersCocktail()">Apply</ion-button>
+    </div>
+</ion-content>

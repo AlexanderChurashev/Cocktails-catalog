@@ -8,11 +8,18 @@ import { StatusBar } from '@ionic-native/status-bar/ngx';
 
 import { AppComponent } from './app.component';
 import { AppRoutingModule } from './app-routing.module';
+import {HttpClientModule} from '@angular/common/http';
+import {ReactiveFormsModule} from '@angular/forms';
+
+import {FiltersComponent} from './filters/filters.component';
+import {FilterItemComponent} from './filter-item/filter-item.component';
+import {DrinksPage} from './drinks/drinks-page.component';
+import {InfiniteScrollModule} from 'ngx-infinite-scroll';
 
 @NgModule({
-  declarations: [AppComponent],
+  declarations: [AppComponent, FiltersComponent, FilterItemComponent, DrinksPage],
   entryComponents: [],
-  imports: [BrowserModule, IonicModule.forRoot(), AppRoutingModule],
+  imports: [BrowserModule, IonicModule.forRoot(), AppRoutingModule, HttpClientModule, ReactiveFormsModule, InfiniteScrollModule],
   providers: [
     StatusBar,
     SplashScreen,
